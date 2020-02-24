@@ -1,0 +1,378 @@
+<html>
+
+<head>
+  <link rel="stylesheet" type="text/css" href="/style.css">
+  <script defer src="/scripts/menu.js"></script>
+</head>
+
+<body class="bg">
+
+<!--heading-->
+<div class="heading">
+  <div id="menu-button" style="font-size: 110%; align-self: flex-start; cursor: pointer;">&#x2630;</div>
+  <div style="display: flex; align-items: center;">
+    <img class="largepic" src="/Pics/Units/Caravel.png">
+    <div style="padding: 0 20px;">Elite Caravel</div>
+  </div>
+  <div style="cursor: pointer; color: white;">
+    <span style="display: inline-block; fill: currentColor; position: relative; width: 80px; height: 80px;">
+      <svg focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path></svg>
+    </span>
+  </div>
+</div>
+
+<!--menu-->
+<div id="menu" class="content" style="display: none; flex-direction: column;">
+  <div class="menu-item">Civilizations</div>
+  <a href="/civs.html" class="sub-menu-item">Civ Picker</a>
+  <div class="menu-item">Units</div>
+  <a href="/infantry.html" class="sub-menu-item">Infantry</a>
+  <a href="/archery.html" class="sub-menu-item">Archery</a>
+  <a href="/cavalry.html" class="sub-menu-item">Cavalry</a>
+  <a href="/other_units.html" class="sub-menu-item">Other Units</a>
+  <div class="menu-item">Strategies</div>
+  <a href="/man_at_arms_rush.html" class="sub-menu-item">Man-at-Arms Rush</a>
+  <a href="/scout_rush.html" class="sub-menu-item">Scout Rush</a>
+  <a href="/archer_rush.html" class="sub-menu-item">Archer Rush</a>
+  <a href="/fast_castle.html" class="sub-menu-item">Fast Castle</a>
+</div>
+
+<!--content-->
+<div class="content">
+
+<div class="row-data">
+  <div class="data-left">Upgrade Path</div>
+  <div class="data-right stack">
+    <a href="caravel.html" style="color: grey; text-decoration: none;">Caravel</a>
+    <div>&gt;&nbsp;Elite Caravel</div>
+  </div>
+</div>
+
+<div class="row-data">
+  <div class="data-left">Age</div>
+  <div class="data-right center">
+    <img class="mediumpic" src="/Pics/Tech/Imperial Age.png">
+    <div style="padding-left: 10px;">Imperial Age</div>
+  </div>
+</div>
+
+<div class="row-data">
+  <div class="data-left">Production</div>
+  <div class="data-right">Dock (36s)</div>
+</div>
+
+<div class="row-data">
+  <div class="data-left">Cost</div>
+  <div class="data-right stack">
+    <div class="center">
+      <div>90</div>
+      <img class="mediumpic" src="/Pics/Others/Wood.png" style="margin: 0 20px 0 10px;">
+      <div>34</div>
+      <img class="mediumpic" src="/Pics/Others/Gold.png" style="margin-left: 10px;">
+    </div>
+    <div class="stack">
+      <div style="display: flex; padding: 10px;">
+        <div style="width: 33%" class="footnote">
+          <img class="smallerpic" src="/Pics/Civs/Portuguese.png">
+          <div style="margin-left: 10px;">(-15% gold)</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row-data">
+  <div class="data-left">HP</div>
+  <div class="data-right stack">
+    <div>165</div>
+    <div class="stack">
+      <div style="display: flex; padding: 10px;">
+        <div style="width: 33%" class="footnote">
+          <img class="smallerpic" src="/Pics/Civs/Portuguese.png">
+          <div style="margin-left: 10px;">(+10%)</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row-data">
+  <div class="data-left">Attack</div>
+  <div class="data-right stack">
+    <div>8+4 (pierce, 100% accuracy)</div>
+    <div class="stack">
+      <div style="display: flex; padding: 10px;">
+        <div style="width: 33%" class="footnote">
+          <img class="smallerpic" src="/Pics/Tech/Fletching.png">
+          <div style="margin-left: 10px;">(+1)</div>
+        </div>
+        <div style="width: 33%" class="footnote">
+          <img class="smallerpic" src="/Pics/Tech/Bodkin Arrow.png">
+          <div style="margin-left: 10px;">(+1)</div>
+        </div>
+        <div style="width: 33%" class="footnote">
+          <img class="smallerpic" src="/Pics/Tech/Bracer.png">
+          <div style="margin-left: 10px;">(+1)</div>
+        </div>
+      </div>
+      <div style="display: flex; padding: 10px;">
+        <div style="width: 33%" class="footnote">
+          <img class="smallerpic" src="/Pics/Tech/Chemistry.png">
+          <div style="margin-left: 10px;">(+1)</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row-data">
+  <div class="data-left">Armor</div>
+  <div class="data-right stack">
+    <div>0+1 / 8+2</div>
+    <div class="stack">
+      <div style="display: flex; padding: 10px;">
+        <div style="width: 33%" class="footnote">
+          <img class="smallerpic" src="/Pics/Tech/Careening.png">
+          <div style="margin-left: 10px;">(+0/1)</div>
+        </div>
+        <div style="width: 33%" class="footnote">
+          <img class="smallerpic" src="/Pics/Tech/Unique Tech (Castle).png">
+          <div style="margin-left: 10px;">(+1/1)</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row-data stack">
+  <div style="display: flex;">
+    <div class="data-left">Range</div>
+    <div class="data-right stack">
+      <div>7+3</div>
+      <div class="stack">
+        <div style="display: flex; padding: 10px;">
+          <div style="width: 33%" class="footnote">
+            <img class="smallerpic" src="/Pics/Tech/Fletching.png">
+            <div style="margin-left: 10px;">(+1)</div>
+          </div>
+          <div style="width: 33%" class="footnote">
+            <img class="smallerpic" src="/Pics/Tech/Bodkin Arrow.png">
+            <div style="margin-left: 10px;">(+1)</div>
+          </div>
+          <div style="width: 33%" class="footnote">
+            <img class="smallerpic" src="/Pics/Tech/Bracer.png">
+            <div style="margin-left: 10px;">(+1)</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div style="font-style: italic; padding-left: 15px;">Scale</div>  
+  <div class="data-scale" style="border-color: rgb(30, 30, 30);">
+    <div style="width: 100%;">&nbsp;</div>
+  </div>
+  <div class="data-scale" style="border-color: white;">
+    <div style="width: 100%;">&nbsp;</div>
+  </div>
+  <div class="data-scale" style="border-color: white;">
+    <div style="width: 62.5%; background-color: burlyWood; border-right: 1px solid burlyWood;">&nbsp;</div>
+    <div style="width: 37.5%;">&nbsp;</div>
+  </div>
+  <div class="data-scale" style="border-color: white;">
+    <div style="width: 15.6%; border-right: 1px solid white;">&nbsp;</div>
+    <div style="width: 46.9%; border-right: 1px solid white;">&nbsp;</div>
+    <div style="width: 18.8%; border-right: 1px solid white;">&nbsp;</div>
+    <div style="width: 12.5%; border-right: 1px solid white;">&nbsp;</div>
+    <div style="width: 6.2%;">&nbsp;</div>
+  </div>
+  <div class="data-scale" style="border-color: rgb(30, 30, 30);">
+    <div style="width: 12.1%;">&nbsp;</div>
+    <div style="width: 7%;" class="stack center">
+      <div>2.49</div>
+      <img src="/Pics/Units/Fast Fire Ship.png" class="pic-framed">
+    </div>
+    <div style="width: 39.9%;">&nbsp;</div>
+    <div style="width: 7%;" class="stack center">
+      <div>10</div>
+      <img src="/Pics/Units/Galleon.png" class="pic-framed">
+    </div>
+    <div style="width: 11.8%;">&nbsp;</div>
+    <div style="width: 7%;" class="stack center">
+      <div>13</div>
+      <img src="/Pics/Units/Cannon Galleon.png" class="pic-framed">
+    </div>
+    <div style="width: 5.5%;">&nbsp;</div>
+    <div style="width: 7%;" class="stack center">
+      <div>15</div>
+      <img src="/Pics/Units/Elite Cannon Galleon.png" class="pic-framed">
+    </div>
+    <div style="width: 2.7%;">&nbsp;</div>
+  </div>
+</div>
+
+<div class="row-data stack">
+  <div style="display: flex;">
+    <div class="data-left">Speed</div>
+    <div class="data-right stack">
+      <div>1.64</div>
+      <div class="stack">
+        <div style="display: flex; padding: 10px;">
+          <div style="width: 33%" class="footnote">
+            <img class="smallerpic" src="/Pics/Tech/Dry Dock.png">
+            <div style="margin-left: 10px;">(+15%)</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div style="font-style: italic; padding-left: 15px;">Scale</div>  
+  <div class="data-scale" style="border-color: rgb(30, 30, 30);">
+    <div style="width: 32.2%;">&nbsp;</div>
+    <div style="width: 7%;" class="stack center">
+      <img src="/Pics/Units/Fishing Ship.png" class="pic-framed">
+      <div>1.45</div>
+    </div>
+    <div style="width: 24.4%;">&nbsp;</div>
+    <div style="width: 7%;" class="stack center">
+      <img src="/Pics/Units/Transport Ship.png" class="pic-framed">
+      <div>1.67</div>
+    </div>
+    <div style="width: 29.4%;">&nbsp;</div>
+  </div>
+  <div class="data-scale" style="border-color: white;">
+    <div style="width: 35.7%; border-right: 1px solid white;">&nbsp;</div>
+    <div style="width: 31.4%; border-right: 1px solid white;">&nbsp;</div>
+    <div style="width: 32.9%;">&nbsp;</div>
+  </div>
+  <div class="data-scale" style="border-color: white;">
+    <div style="width: 62.9%; background-color: burlyWood; border-right: 1px solid burlyWood;">&nbsp;</div>
+    <div style="width: 37.1%;">&nbsp;</div>
+  </div>
+  <div class="data-scale" style="border-color: white;">
+    <div style="width: 10%; border-right: 1px solid white;">&nbsp;</div>
+    <div style="width: 52.8%; border-right: 1px solid white;">&nbsp;</div>
+    <div style="width: 28.6%; border-right: 1px solid white;">&nbsp;</div>
+    <div style="width: 8.6%;">&nbsp;</div>
+  </div>
+  <div class="data-scale" style="border-color: rgb(30, 30, 30);">
+    <div style="width: 6.5%;">&nbsp;</div>
+    <div style="width: 7%;" class="stack center">
+      <div>1.27</div>
+      <img src="/Pics/Units/Elite Cannon Galleon.png" class="pic-framed">
+    </div>
+    <div style="width: 42.3%;">&nbsp;</div>
+    <div style="width: 14%;" class="stack center">
+      <div>1.64</div>
+      <div style="display: flex;">
+        <div><img src="/Pics/Units/Fast Fire Ship.png" class="pic-framed"></div>
+        <div><img src="/Pics/Units/Galleon.png" class="pic-framed"></div>
+      </div>
+    </div>
+    <div style="width: 18.1%;">&nbsp;</div>
+    <div style="width: 7%;" class="stack center">
+      <div>1.84</div>
+      <img src="/Pics/Units/Heavy Demolition Ship.png" class="pic-framed">
+    </div>
+    <div style="width: 5.1%;">&nbsp;</div>
+  </div>
+</div>
+
+<div class="row-data stack" style="border-bottom: 0;">
+  <div style="color: burlyWood; font-weight: bold;">Attack Bonuses</div>
+  <div class="data-section">Siege</div>
+  <div class="row-data" style="font-size: 100%;">
+    <div class="data-col-1">+4</div>
+    <div class="data-col-2">vs</div>
+    <div class="stack">
+      <div>Battering Ram</div>
+    </div>
+  </div>
+  <div class="row-data" style="font-size: 100%;">
+    <div class="data-col-1">+3</div>
+    <div class="data-col-2">vs</div>
+    <div class="stack">
+      <div>Capped Ram</div>
+    </div>
+  </div>
+  <div class="row-data" style="font-size: 100%;">
+    <div class="data-col-1">+2</div>
+    <div class="data-col-2">vs</div>
+    <div class="stack">
+      <div>Siege Ram</div>
+    </div>
+  </div>
+  <div class="data-section">Navy</div>
+  <div class="row-data" style="font-size: 100%;">
+    <div class="data-col-1">+7</div>
+    <div class="data-col-2">vs</div>
+    <div class="stack">
+      <div>Fishing Ship</div>
+      <div>Galley-line</div>
+      <div>Cannon Galleon-line</div>
+      <div>(Elite) Longboat</div>
+      <div>(Elite) Caravel</div>
+    </div>
+  </div>
+  <div class="row-data" style="font-size: 100%;">
+    <div class="data-col-1">+6</div>
+    <div class="data-col-2">vs</div>
+    <div class="stack">
+      <div>Demolition Raft</div>
+    </div>
+  </div>
+  <div class="row-data" style="font-size: 100%;">
+    <div class="data-col-1">+4</div>
+    <div class="data-col-2">vs</div>
+    <div class="stack">
+      <div>Demolition Ship</div>
+    </div>
+  </div>
+  <div class="row-data" style="font-size: 100%;">
+    <div class="data-col-1">+2</div>
+    <div class="data-col-2">vs</div>
+    <div class="stack">
+      <div>Heavy Demolition Ship</div>
+    </div>
+  </div>
+  <div class="row-data" style="font-size: 100%;">
+    <div class="data-col-1">+1</div>
+    <div class="data-col-2">vs</div>
+    <div class="stack">
+      <div>Fire Galley</div>
+      <div>Fire Ship</div>
+    </div>
+  </div>
+  <div class="data-section">Building</div>
+  <div class="row-data" style="font-size: 100%;">
+    <div class="data-col-1">+9</div>
+    <div class="data-col-2">vs</div>
+    <div class="stack">
+      <div>Palisade Wall, Palisade Gate</div>
+    </div>
+  </div>
+  <div class="row-data" style="font-size: 100%;">
+    <div class="data-col-1">+9</div>
+    <div class="data-col-2">vs</div>
+    <div class="stack">
+      <div>Non-Defensive Buildings</div>
+      <div>Tower, Harbor</div>
+      <div>Wonder</div>
+      <div style="font-size: 80%; color: darkGrey;">(Masonry -3, Architecture -6 total)</div>
+    </div>
+  </div>
+  <div class="row-data" style="font-size: 100%;">
+    <div class="data-col-1">+1</div>
+    <div class="data-col-2">vs</div>
+    <div class="stack">
+      <div>Castle, Krepost</div>
+      <div style="font-size: 80%; color: darkGrey;">(Masonry -1)</div>
+    </div>
+  </div>
+</div>
+
+<br><br><br>
+
+</div>
+
+</body>
+</html>

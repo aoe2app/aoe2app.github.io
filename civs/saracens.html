@@ -1,0 +1,628 @@
+<html>
+
+<head>
+  <link rel="stylesheet" type="text/css" href="/style.css">
+  <script defer src="/scripts/menu.js"></script>
+  <script defer src="/scripts/tab.js"></script>
+</head>
+
+<body class="bg">
+
+<!--heading-->
+<div class="heading">
+  <div id="menu-button" style="font-size: 110%; align-self: flex-start; cursor: pointer;">&#x2630;</div>
+  <div style="display: flex; align-items: center;">
+    <img class="largepic" src="/Pics/Civs/Saracens.png">
+    <div style="padding: 0 10px;">Saracens</div>
+  </div>
+  <div style="cursor: pointer; color: white;">
+    <span style="display: inline-block; fill: currentColor; position: relative; width: 80px; height: 80px;">
+      <svg focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path></svg>
+    </span>
+  </div>
+</div>
+
+<!--menu-->
+<div id="menu" class="content" style="display: none; flex-direction: column;">
+  <div class="menu-item">Civilizations</div>
+  <a href="/civs.html" class="sub-menu-item">Civ Picker</a>
+  <div class="menu-item">Units</div>
+  <a href="/infantry.html" class="sub-menu-item">Infantry</a>
+  <a href="/archery.html" class="sub-menu-item">Archery</a>
+  <a href="/cavalry.html" class="sub-menu-item">Cavalry</a>
+  <a href="/other_units.html" class="sub-menu-item">Other Units</a>
+  <div class="menu-item">Strategies</div>
+  <a href="/man_at_arms_rush.html" class="sub-menu-item">Man-at-Arms Rush</a>
+  <a href="/scout_rush.html" class="sub-menu-item">Scout Rush</a>
+  <a href="/archer_rush.html" class="sub-menu-item">Archer Rush</a>
+  <a href="/fast_castle.html" class="sub-menu-item">Fast Castle</a>
+</div>
+
+<!--content-->
+<div class="content">
+
+  <!--tab bar-->
+  <div class="tab">
+    <div id="overview-tab" class="selected">Overview</div>
+    <div id="techs-tab" class="unselected">Techs</div>
+    <div id="strategy-tab" class="unselected">Strategy</div>
+  </div>
+
+  <!--overview tab-->
+  <div id="overview">
+    <div class="sub-heading">Civ Bonuses</div>
+    <div class="textbox">
+      <img class="smallpic" src="/Pics/Civs/Saracens.png">
+      <div style="padding: 5px;">Market trade cost only 5%</div>
+    </div>
+    <div class="textbox">
+      <img class="smallpic" src="/Pics/Civs/Saracens.png">
+      <div style="padding: 5px;">Market costs -100 wood</div>
+    </div>
+    <div class="textbox">
+      <img class="smallpic" src="/Pics/Civs/Saracens.png">
+      <div style="padding: 5px;">Transport Ships 2x HP, 2x carry capacity</div>
+    </div>
+    <div class="textbox">
+      <img class="smallpic" src="/Pics/Civs/Saracens.png">
+      <div style="padding: 5px;">Galleys attack 20% faster</div>
+    </div>
+    <div class="textbox">
+      <img class="smallpic" src="/Pics/Civs/Saracens.png">
+      <div style="padding: 5px;">Archers (except skirmishers) +1/2/3 attack vs. buildings in Feudal/Castle/Imperial Age</div>
+    </div>
+    <div class="textbox">
+      <img class="smallpic" src="/Pics/Civs/Saracens.png">
+      <div style="padding: 5px; color: mediumSeaGreen"><b>Team Bonus:</b> Foot archers +1 attack vs. buildings</div>
+    </div>
+    <br><br>
+    <div class="sub-heading">Unique Techs</div>
+    <div class="textbox">
+      <img class="smallpic" src="/Pics/Tech/Unique Tech (Castle).png">
+      <div style="padding: 5px; color: silver;"><b>Madrash:</b> Monks return 33% of their cost when killed</div>
+    </div>
+    <div class="textbox">
+      <img class="smallpic" src="/Pics/Tech/Unique Tech (Imperial).png">
+      <div style="padding: 5px; color: gold;"><b>Zealotry:</b> Camel units +30 HP</div>
+    </div>
+    <br><br>
+    <div class="sub-heading">Unique Unit</div>
+    <div style="display: flex; padding: 10px;">
+      <a href="/units/mameluke.html" style="width: 50%; display: flex; align-items: center;">
+        <div style="width: 40%;"><img class="pic-uu" style="width: 100%;" src="/Pics/Units/Mameluke.png"></div>
+        <div style="width: 50%; color: plum; font-size: 270%; padding-left: 20px;">Mameluke</div>
+      </a>
+    </div>
+    <br><br>
+    <div class="sub-heading">Strategies</div>
+    <div style="display: flex; flex-direction: column; color: white;">
+      <div class="textbox short">
+        <div style="width: 80%;">Man-at-Arms Rush</div>
+        <div style="color: gold; font-size: 130%;">A</div>
+      </div>
+      <div class="textbox short">
+        <div style="width: 80%;">Scout Rush</div>
+        <div style="color: white; font-size: 130%;">B</div>
+      </div>
+      <div class="textbox short">
+        <div style="width: 80%;">Archer Rush</div>
+        <div style="color: grey; font-size: 130%;">C</div>
+      </div>
+      <div class="textbox short">
+        <div style="width: 80%;">Fast Castle</div>
+        <div style="color: darkRed; font-size: 130%;">D</div>
+      </div>
+      <div class="textbox short">
+        <div style="width: 80%;">Early Imperial</div>
+        <div style="color: gold; font-size: 130%;">A</div>
+      </div>
+      <div class="textbox short">
+        <div style="width: 80%;">Post Imperial</div>
+        <div style="color: white; font-size: 130%;">B</div>
+      </div>
+      <div class="textbox short">
+        <div style="width: 80%;">Trash War</div>
+        <div style="color: grey; font-size: 130%;">C</div>
+      </div>
+      <div class="textbox short">
+        <div style="width: 80%;">Water</div>
+        <div style="color: darkRed; font-size: 130%;">D</div>
+      </div>
+    </div>
+  </div>
+
+  <!--techs tab-->
+  <div id="techs" style="display: none;">
+    <div class="sub-heading">Economy</div>
+    <div class="row">
+      <div class="cell fu">
+        <img class="pic" src="/Pics/Tech/Two-Man Saw.png">
+        <div class="name">Two-Man Saw</div>
+      </div>
+      <div class="cell">
+        <img class="pic" src="/Pics/Tech/Heavy Plow.png">
+        <div class="name">Heavy Plow</div>
+      </div>
+      <div class="cell fu">
+        <img class="pic" src="/Pics/Tech/Gold Shaft Mining.png">
+        <div class="name">Gold Shaft Mining</div>
+      </div>
+      <div class="cell">
+        <img class="pic" src="/Pics/Tech/Stone Mining.png">
+        <div class="name">Stone Mining</div>
+      </div>
+    </div>
+    <div class="textbox">
+      <img class="smallpic" src="/Pics/Civs/Saracens.png">
+      <div style="padding: 5px;">Market trade cost only 5%</div>
+    </div>
+    <div class="textbox">
+      <img class="smallpic" src="/Pics/Civs/Saracens.png">
+      <div style="padding: 5px;">Market costs -100 wood</div>
+    </div>
+    <br><br>
+    <div class="sub-heading">Infantry</div>
+    <div class="row">
+      <a href="/units/champion.html" class="cell fu">
+        <img class="pic" src="/Pics/Units/Champion.png">
+        <div class="name">Champion</div>
+      </a>
+      <a href="/units/pikeman.html" class="cell">
+        <img class="pic" src="/Pics/Units/Pikeman.png">
+        <div class="name">Pikeman</div>
+      </a>
+      <div class="cell crossed">
+        <img class="pic" src="/Pics/Units/Eagle Scout.png">
+        <div class="name">Eagle Scout</div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="cell">
+        <img class="pic" src="/Pics/Tech/Supplies.png">
+        <div class="name">Supplies</div>
+      </div>
+      <div class="cell">
+        <img class="pic" src="/Pics/Tech/Squires.png">
+        <div class="name">Squires</div>
+      </div>
+      <div class="cell fu">
+        <img class="pic" src="/Pics/Tech/Blast Furnace.png">
+        <div class="name">Blast Furnace</div>
+      </div>
+      <div class="cell fu">
+        <img class="pic" src="/Pics/Tech/Plate Mail Armor.png">
+        <div class="name">Plate Mail Armor</div>
+      </div>
+    </div>
+    <br><br>
+    <div class="sub-heading">Archery</div>
+    <div class="row">
+      <a href="/units/arbalester.html" class="cell fu">
+        <img class="pic" src="/Pics/Units/Arbalester.png">
+        <div class="name">Arbalester</div>
+      </a>
+      <a href="/units/elite_skrimisher.html" class="cell fu">
+        <img class="pic" src="/Pics/Units/Elite Skirmisher.png">
+        <div class="name">Elite Skirmisher</div>
+      </a>
+      <a href="/units/heavy_cav_archer.html" class="cell fu">
+        <img class="pic" src="/Pics/Units/Heavy Cavalry Archer.png">
+        <div class="name">Heavy Cavalry Archer</div>
+      </a>
+      <a href="/units/hand_cannoneer.html" class="cell">
+        <img class="pic" src="/Pics/Units/Hand Cannoneer.png">
+        <div class="name">Hand Cannoneer</div>
+      </a>
+    </div>
+    <div class="row">
+      <div class="cell">
+        <img class="pic" src="/Pics/Tech/Thumb Ring.png">
+        <div class="name">Thumb Ring</div>
+      </div>
+      <div class="cell">
+        <img class="pic" src="/Pics/Tech/Parthian Tactics.png">
+        <div class="name">Parthian Tactics</div>
+      </div>
+      <div class="cell fu">
+        <img class="pic" src="/Pics/Tech/Bracer.png">
+        <div class="name">Bracer</div>
+      </div>
+      <div class="cell fu">
+        <img class="pic" src="/Pics/Tech/Ring Archer Armor.png">
+        <div class="name">Ring Archer Armor</div>
+      </div>
+    </div>
+    <div class="textbox">
+      <img class="smallpic" src="/Pics/Civs/Saracens.png">
+      <div style="padding: 5px;">Archers (except skirmishers) +1/2/3 attack vs. buildings in Feudal/Castle/Imperial Age</div>
+    </div>
+    <div class="textbox">
+      <img class="smallpic" src="/Pics/Civs/Saracens.png">
+      <div style="padding: 5px; color: mediumSeaGreen"><b>Team Bonus:</b> Foot archers +1 attack vs. buildings</div>
+    </div>
+    <br><br>
+    <div class="sub-heading">Cavalry</div>
+    <div class="row">
+      <a href="/units/hussar.html" class="cell fu">
+        <img class="pic" src="/Pics/Units/Hussar.png">
+        <div class="name">Hussar</div>
+      </a>
+      <a href="/units/knight.html" class="cell low">
+        <img class="pic" src="/Pics/Units/Knight.png">
+        <div class="name">Knight</div>
+      </a>
+    </div>
+    <div class="row">
+      <a href="/units/heavy_camel_rider.html" class="cell fu">
+        <img class="pic" src="/Pics/Units/Heavy Camel Rider.png">
+        <div class="name">Heavy Camel Rider</div>
+      </a>
+      <div class="cell crossed">
+        <img class="pic" src="/Pics/Units/Battle Elephant.png">
+        <div class="name">Battle Elephant</div>
+      </div>
+      <div class="cell crossed">
+        <img class="pic" src="/Pics/Units/Steppe Lancer.png">
+        <div class="name">Steppe Lancer</div>
+      </div>
+      <a href="/units/elite_mameluke.html" class="cell">
+        <img class="pic-uu" src="/Pics/Units/Mameluke.png">
+        <div class="name uu">Elite Mameluke</div>
+      </a>
+    </div>
+    <div class="row">
+      <div class="cell">
+        <img class="pic" src="/Pics/Tech/Bloodlines.png">
+        <div class="name">Bloodlines</div>
+      </div>
+      <div class="cell">
+        <img class="pic" src="/Pics/Tech/Husbandry.png">
+        <div class="name">Husbandry</div>
+      </div>
+      <div class="cell fu">
+        <img class="pic" src="/Pics/Tech/Blast Furnace.png">
+        <div class="name">Blast Furnace</div>
+      </div>
+      <div class="cell fu">
+        <img class="pic" src="/Pics/Tech/Plate Barding Armor.png">
+        <div class="name">Plate Barding Armor</div>
+      </div>
+    </div>
+    <div class="textbox">
+      <img class="smallpic" src="/Pics/Tech/Unique Tech (Imperial).png">
+      <div style="padding: 5px; color: gold;"><b>Zealotry:</b> Camel units +30 HP</div>
+    </div>
+    <br><br>
+    <div class="sub-heading">Siege</div>
+    <div class="row">
+      <a href="/units/siege_ram.html" class="cell fu">
+        <img class="pic" src="/Pics/Units/Siege Ram.png">
+        <div class="name">Siege Ram</div>
+      </a>
+      <a href="/units/siege_onager.html" class="cell fu">
+        <img class="pic" src="/Pics/Units/Siege Onager.png">
+        <div class="name">Siege Onager</div>
+      </a>
+      <a href="/units/scorpion.html" class="cell">
+        <img class="pic" src="/Pics/Units/Scorpion.png">
+        <div class="name">Scorpion</div>
+      </a>
+      <a href="/units/bombard_cannon.html" class="cell">
+        <img class="pic" src="/Pics/Units/Bombard Cannon.png">
+        <div class="name">Bombard Cannon</div>
+      </a>
+    </div>
+    <div class="row">
+      <a href="/units/siege_tower.html" class="cell">
+        <img class="pic" src="/Pics/Units/Siege Tower.png">
+        <div class="name">Siege Tower</div>
+      </a>
+      <a href="/units/petard.html" class="cell">
+        <img class="pic" src="/Pics/Units/Petard.png">
+        <div class="name">Petard</div>
+      </a>
+      <a href="/units/trebuchet.html" class="cell">
+        <img class="pic" src="/Pics/Units/Trebuchet (packed).png">
+        <div class="name">Trebuchet</div>
+      </a>
+    </div>
+    <div class="row">
+      <div class="cell crossed">
+        <img class="pic" src="/Pics/Tech/Siege Engineers.png">
+        <div class="name">Siege Engineers</div>
+      </div>
+    </div>
+    <br><br>
+    <div class="sub-heading">Navy</div>
+    <div class="row">
+      <a href="/units/galleon.html" class="cell fu">
+        <img class="pic" src="/Pics/Units/Galleon.png">
+        <div class="name">Galleon</div>
+      </a>
+      <a href="/units/heavy_demo_ship.html" class="cell fu">
+        <img class="pic" src="/Pics/Units/Heavy Demolition Ship.png">
+        <div class="name">Heavy Demolition Ship</div>
+      </a>
+      <a href="/units/fast_fire_ship.html" class="cell fu">
+        <img class="pic" src="/Pics/Units/Fast Fire Ship.png">
+        <div class="name">Fast Fire Ship</div>
+      </a>
+      <a href="/units/elite_cannon_galleon.html" class="cell fu">
+        <img class="pic" src="/Pics/Units/Elite Cannon Galleon.png">
+        <div class="name">Elite Cannon Galleon</div>
+      </a>
+    </div>
+    <div class="row">
+      <div class="cell fu">
+        <img class="pic" src="/Pics/Tech/Dry Dock.png">
+        <div class="name">Dry Dock</div>
+      </div>
+      <div class="cell crossed">
+        <img class="pic" src="/Pics/Tech/Shipwright.png">
+        <div class="name">Shipwright</div>
+      </div>
+      <div class="cell fu">
+        <img class="pic" src="/Pics/Tech/Bracer.png">
+        <div class="name">Bracer</div>
+      </div>
+    </div>
+    <div class="textbox">
+      <img class="smallpic" src="/Pics/Civs/Saracens.png">
+      <div style="padding: 5px;">Transport Ships 2x HP, 2x carry capacity</div>
+    </div>
+    <div class="textbox">
+      <img class="smallpic" src="/Pics/Civs/Saracens.png">
+      <div style="padding: 5px;">Galleys attack 20% faster</div>
+    </div>
+    <br><br>
+    <div class="sub-heading">Monastery</div>
+    <div class="row">
+      <a href="/units/monk.html" class="cell">
+        <img class="pic" src="/Pics/Units/Monk.png">
+        <div class="name">Monk</div>
+      </a>
+      <div class="cell"></div>
+      <div class="cell">
+        <img class="pic" src="/Pics/Tech/Redemption.png">
+        <div class="name">Redemption</div>
+      </div>
+      <div class="cell">
+        <img class="pic" src="/Pics/Tech/Atonement.png">
+        <div class="name">Atonement</div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="cell">
+        <img class="pic" src="/Pics/Tech/Sanctity.png">
+        <div class="name">Sanctity</div>
+      </div>
+      <div class="cell">
+        <img class="pic" src="/Pics/Tech/Fervor.png">
+        <div class="name">Fervor</div>
+      </div>
+      <div class="cell">
+        <img class="pic" src="/Pics/Tech/Heresy.png">
+        <div class="name">Heresy</div>
+      </div>
+      <div class="cell">
+        <img class="pic" src="/Pics/Tech/Faith.png">
+        <div class="name">Faith</div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="cell">
+        <img class="pic" src="/Pics/Tech/Illumination.png">
+        <div class="name">Illumination</div>
+      </div>
+      <div class="cell">
+        <img class="pic" src="/Pics/Tech/Block Printing.png">
+        <div class="name">Block Printing</div>
+      </div>
+      <div class="cell">
+        <img class="pic" src="/Pics/Tech/Theocracy.png">
+        <div class="name">Theocracy</div>
+      </div>
+      <div class="cell">
+        <img class="pic" src="/Pics/Tech/Herbal Medicine.png">
+        <div class="name">Herbal Medicine</div>
+      </div>
+    </div>
+    <div class="textbox">
+      <img class="smallpic" src="/Pics/Tech/Unique Tech (Castle).png">
+      <div style="padding: 5px; color: silver;"><b>Madrash:</b> Monks return 33% of their cost when killed</div>
+    </div>
+    <br><br>
+    <div class="sub-heading">Defense</div>
+    <div class="row">
+      <div class="cell">
+        <img class="pic" src="/Pics/Tech/Masonry.png">
+        <div class="name">Masonry</div>
+      </div>
+      <div class="cell">
+        <img class="pic" src="/Pics/Tech/Hoardings.png">
+        <div class="name">Hoardings</div>
+      </div>
+      <div class="cell fu">
+        <img class="pic" src="/Pics/Tech/Fortified Wall.png">
+        <div class="name">Fortified Wall</div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="cell fu">
+        <img class="pic" src="/Pics/Tech/Keep.png">
+        <div class="name">Keep</div>
+      </div>
+      <div class="cell crossed">
+        <img class="pic" src="/Pics/Tech/Bombard Tower.png">
+        <div class="name">Bombard Tower</div>
+      </div>
+      <div class="cell">
+        <img class="pic" src="/Pics/Tech/Arrowslits.png">
+        <div class="name">Arrowslits</div>
+      </div>
+      <div class="cell crossed">
+        <img class="pic" src="/Pics/Tech/Heated Shot.png">
+        <div class="name">Heated Shot</div>
+      </div>
+    </div>
+    <br><br>
+    <div class="sub-heading">Others</div>
+    <div class="row">
+      <a href="/units/villager.html" class="cell">
+        <img class="pic" src="/Pics/Units/Villager (male).png">
+        <div class="name">Villager</div>
+      </a>
+      <div class="cell">
+        <img class="pic" src="/Pics/Tech/Loom.png">
+        <div class="name">Loom</div>
+      </div>
+      <div class="cell">
+        <img class="pic" src="/Pics/Tech/Gillnets.png">
+        <div class="name">Gillnets</div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="cell">
+        <img class="pic" src="/Pics/Tech/Wheelbarrow.png">
+        <div class="name">Wheelbarrow</div>
+      </div>
+      <div class="cell">
+        <img class="pic" src="/Pics/Tech/Hand Cart.png">
+        <div class="name">Hand Cart</div>
+      </div>
+      <div class="cell">
+        <img class="pic" src="/Pics/Tech/Town Watch.png">
+        <div class="name">Town Watch</div>
+      </div>
+      <div class="cell">
+        <img class="pic" src="/Pics/Tech/Town Patrol.png">
+        <div class="name">Town Patrol</div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="cell">
+        <img class="pic" src="/Pics/Tech/Treadmill Crane.png">
+        <div class="name">Treadmill Crane</div>
+      </div>
+      <div class="cell">
+        <img class="pic" src="/Pics/Tech/Ballistics.png">
+        <div class="name">Ballistics</div>
+      </div>
+      <div class="cell">
+        <img class="pic" src="/Pics/Tech/Murder Holes.png">
+        <div class="name">Murder Holes</div>
+      </div>
+      <div class="cell">
+        <img class="pic" src="/Pics/Tech/Chemistry.png">
+        <div class="name">Chemistry</div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="cell crossed">
+        <img class="pic" src="/Pics/Tech/Sappers.png">
+        <div class="name">Sappers</div>
+      </div>
+      <div class="cell">
+        <img class="pic" src="/Pics/Tech/Conscription.png">
+        <div class="name">Conscription</div>
+      </div>
+      <div class="cell">
+        <img class="pic" src="/Pics/Tech/Spies.png">
+        <div class="name">Spies / Treason</div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="cell crossed">
+        <img class="pic" src="/Pics/Tech/Guilds.png">
+        <div class="name">Guilds</div>
+      </div>
+      <div class="cell">
+        <img class="pic" src="/Pics/Tech/Caravan.png">
+        <div class="name">Caravan</div>
+      </div>
+      <div class="cell">
+        <img class="pic" src="/Pics/Tech/Coinage.png">
+        <div class="name">Coinage</div>
+      </div>
+      <div class="cell">
+        <img class="pic" src="/Pics/Tech/Banking.png">
+        <div class="name">Banking</div>
+      </div>
+    </div>
+    <br><br>
+  </div>
+
+  <!--strategy tab-->
+  <div id="strategy" style="display: none;">
+    <div class="sub-heading" style="display: flex;">
+      <div style="width: 80%;">Man-at-Arms Rush</div>
+      <div style="color: gold;">A</div>
+    </div>
+    <div class="textbox" style="padding: 10px;">
+      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.
+    </div>
+    <br><br>
+    <div class="sub-heading" style="display: flex;">
+      <div style="width: 80%;">Scout Rush</div>
+      <div style="color: white;">B</div>
+    </div>
+    <div class="textbox" style="padding: 10px;">
+      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.
+    </div>
+    <br><br>
+    <div class="sub-heading" style="display: flex;">
+      <div style="width: 80%;">Archer Rush</div>
+      <div style="color: grey;">C</div>
+    </div>
+    <div class="textbox" style="padding: 10px;">
+      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.
+    </div>
+    <br><br>
+    <div class="sub-heading" style="display: flex;">
+      <div style="width: 80%;">Fast Castle</div>
+      <div style="color: darkRed;">D</div>
+    </div>
+    <div class="textbox" style="padding: 10px;">
+      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.
+    </div>
+    <br><br>
+    <div class="sub-heading" style="display: flex;">
+      <div style="width: 80%;">Early Imperial</div>
+      <div style="color: gold;">A</div>
+    </div>
+    <div class="textbox" style="padding: 10px;">
+      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.
+    </div>
+    <br><br>
+    <div class="sub-heading" style="display: flex;">
+      <div style="width: 80%;">Post Imperial</div>
+      <div style="color: white;">B</div>
+    </div>
+    <div class="textbox" style="padding: 10px;">
+      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.
+    </div>
+    <br><br>
+    <div class="sub-heading" style="display: flex;">
+      <div style="width: 80%;">Trash War</div>
+      <div style="color: grey;">C</div>
+    </div>
+    <div class="textbox" style="padding: 10px;">
+      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.
+    </div>
+    <br><br>
+    <div class="sub-heading" style="display: flex;">
+      <div style="width: 80%;">Water</div>
+      <div style="color: darkRed;">D</div>
+    </div>
+    <div class="textbox" style="padding: 10px;">
+      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.
+    </div>
+  </div>
+
+  <br><br>
+
+</div>
+
+</body>
+
+</html>
