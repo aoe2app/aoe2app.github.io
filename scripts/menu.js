@@ -300,10 +300,10 @@ searchBox.addEventListener("input", () => {
         for (let index = 1; index < splits.length; index++) {
           result += (index === obj.index ? ` <span style="font-weight: bold;">${splits[index].substr(0, str.length)}</span>${splits[index].substr(str.length)}` : ` ${splits[index]}`);
         }
-        inner += `<a href="${obj.link}" class="sub-menu-item" style="padding: 9px 50px;">${result}</a>\n`;
+        inner += `<a href="${obj.link}" class="sub-menu-item">${result}</a>\n`;
       } else {
         let result = `${obj.name.substr(0, -obj.index - 1)}<span style="font-weight: bold;">${obj.name.substr(-obj.index - 1, str.length)}</span>${obj.name.substr(-obj.index - 1 + str.length)}`;
-        inner += `<a href="${obj.link}" class="sub-menu-item" style="padding: 9px 50px;">${result}</a>\n`;
+        inner += `<a href="${obj.link}" class="sub-menu-item">${result}</a>\n`;
       }
     }
   }
@@ -316,10 +316,10 @@ searchBox.addEventListener("input", () => {
         for (let index = 1; index < splits.length; index++) {
           result += (index === obj.index ? ` <span style="font-weight: bold;">${splits[index].substr(0, str.length)}</span>${splits[index].substr(str.length)}` : ` ${splits[index]}`);
         }
-        inner += `<a href="${obj.link}" class="sub-menu-item" style="padding: 9px 50px;">${result}</a>\n`;
+        inner += `<a href="${obj.link}" class="sub-menu-item">${result}</a>\n`;
       } else {
         let result = `${obj.name.substr(0, -obj.index - 1)}<span style="font-weight: bold;">${obj.name.substr(-obj.index - 1, str.length)}</span>${obj.name.substr(-obj.index - 1 + str.length)}`;
-        inner += `<a href="${obj.link}" class="sub-menu-item" style="padding: 9px 50px;">${result}</a>\n`;
+        inner += `<a href="${obj.link}" class="sub-menu-item">${result}</a>\n`;
       }
     }
   }
@@ -332,10 +332,10 @@ searchBox.addEventListener("input", () => {
         for (let index = 1; index < splits.length; index++) {
           result += (index === obj.index ? ` <span style="font-weight: bold;">${splits[index].substr(0, str.length)}</span>${splits[index].substr(str.length)}` : ` ${splits[index]}`);
         }
-        inner += `<a href="${obj.link}" class="sub-menu-item" style="padding: 9px 50px;">${result}</a>\n`;
+        inner += `<a href="${obj.link}" class="sub-menu-item">${result}</a>\n`;
       } else {
         let result = `${obj.name.substr(0, -obj.index - 1)}<span style="font-weight: bold;">${obj.name.substr(-obj.index - 1, str.length)}</span>${obj.name.substr(-obj.index - 1 + str.length)}`;
-        inner += `<a href="${obj.link}" class="sub-menu-item" style="padding: 9px 50px;">${result}</a>\n`;
+        inner += `<a href="${obj.link}" class="sub-menu-item">${result}</a>\n`;
       }
     }
   }
