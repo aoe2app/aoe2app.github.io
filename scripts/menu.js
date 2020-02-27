@@ -231,53 +231,122 @@ const strats = [
 
 searchBox.addEventListener("input", () => {
   const str = searchBox.value.toLowerCase();
-  let inner = '';
-  if (str.length >= 3) {
-    let foundCivs = [];
-    let foundUnits = [];
-    let foundStrats = [];
-    let count = 0;
-    for (obj of civs) {
-      if (obj.name.toLowerCase().startsWith(str)) {
-        if (count < 5) foundCivs.push(obj);
-        count++;
-      }
-    }
-    for (obj of units) {
-      if (obj.name.toLowerCase().startsWith(str)) {
-        if (count < 5) foundUnits.push(obj);
-        count++;
-      }
-    }
-    for (obj of strats) {
-      if (obj.name.toLowerCase().startsWith(str)) {
-        if (count < 5) foundStrats.push(obj);
-        count++;
-      }
-    }
-    if (foundCivs.length > 0) {
-      inner += '<div class="menu-item">Civs</div>\n';
-      for (obj of foundCivs) {
-        inner += `<a href="${obj.link}" class="sub-menu-item"><span style="font-weight: bold;">${obj.name.substr(0, str.length)}</span>${obj.name.substr(str.length)}</a>\n`;
-      }
-    }
-    if (foundUnits.length > 0) {
-      inner += '<div class="menu-item">Units</div>\n';
-      for (obj of foundUnits) {
-        inner += `<a href="${obj.link}" class="sub-menu-item"><span style="font-weight: bold;">${obj.name.substr(0, str.length)}</span>${obj.name.substr(str.length)}</a>\n`;
-      }
-    }
-    if (foundStrats.length > 0) {
-      inner += '<div class="menu-item">Strategies</div>\n';
-      for (obj of foundStrats) {
-        inner += `<a href="${obj.link}" class="sub-menu-item"><span style="font-weight: bold;">${obj.name.substr(0, str.length)}</span>${obj.name.substr(str.length)}</a>\n`;
-      }
-    }
-    if (count > 5) {
-      inner += `<div class="menu-item" style="font-weight: normal;">and ${count - 5} other results</div>\n`;
-    }
-    searchResult.innerHTML = inner;
-  } else {
+  if (str === '') {
     searchResult.innerHTML = '';
+    return 0;
+  }
+  let inner = '';
+  let foundCivs = [];
+  let foundUnits = [];
+  let foundStrats = [];
+  let count = 0;
+  for (obj of civs) {
+    let splits = (str.includes(" ") ? [obj.name.toLowerCase()] : obj.name.toLowerCase().split(" "));
+    if (!str.includes(" ")) {
+      for (let index = 0; index < splits.length; index++) {
+        if (splits[index].startsWith(str)) {
+          if (count < 5) foundCivs.push({...obj, index});
+          count++;
+          break;
+        }
+      }
+    } else {
+      if (obj.name.toLowerCase().includes(str)) {
+        if (count < 5) foundCivs.push({...obj, index: -obj.name.toLowerCase().search(str) - 1});
+        count++;
+      }
+    }
+  }
+  for (obj of units) {
+    let splits = (str.includes(" ") ? [obj.name.toLowerCase()] : obj.name.toLowerCase().split(" "));
+    if (!str.includes(" ")) {
+      for (let index = 0; index < splits.length; index++) {
+        if (splits[index].startsWith(str)) {
+          if (count < 5) foundUnits.push({...obj, index});
+          count++;
+          break;
+        }
+      }
+    } else {
+      if (obj.name.toLowerCase().includes(str)) {
+        if (count < 5) foundUnits.push({...obj, index: -obj.name.toLowerCase().search(str) - 1});
+        count++;
+      }
+    }
+  }
+  for (obj of strats) {
+    let splits = (str.includes(" ") ? [obj.name.toLowerCase()] : obj.name.toLowerCase().split(" "));
+    if (!str.includes(" ")) {
+      for (let index = 0; index < splits.length; index++) {
+        if (splits[index].startsWith(str)) {
+          if (count < 5) foundStrats.push({...obj, index});
+          count++;
+          break;
+        }
+      }
+    } else {
+      if (obj.name.toLowerCase().includes(str)) {
+        if (count < 5) foundStrats.push({...obj, index: -obj.name.toLowerCase().search(str) - 1});
+        count++;
+      }
+    }
+  }
+  if (foundCivs.length > 0) {
+    inner += '<div class="menu-item" style="font-weight: normal;">Civs</div>\n';
+    for (obj of foundCivs) {
+      let splits = (str.includes(" ") ? [obj.name] : obj.name.split(" "));
+      if (obj.index >= 0) {
+        let result = obj.index ? splits[0] : `<span style="font-weight: bold;">${splits[0].substr(0, str.length)}</span>${splits[0].substr(str.length)}`;
+        for (let index = 1; index < splits.length; index++) {
+          result += (index === obj.index ? ` <span style="font-weight: bold;">${splits[index].substr(0, str.length)}</span>${splits[index].substr(str.length)}` : ` ${splits[index]}`);
+        }
+        inner += `<a href="${obj.link}" class="sub-menu-item" style="padding: 9px 50px;">${result}</a>\n`;
+      } else {
+        let result = `${obj.name.substr(0, -obj.index - 1)}<span style="font-weight: bold;">${obj.name.substr(-obj.index - 1, str.length)}</span>${obj.name.substr(-obj.index - 1 + str.length)}`;
+        inner += `<a href="${obj.link}" class="sub-menu-item" style="padding: 9px 50px;">${result}</a>\n`;
+      }
+    }
+  }
+  if (foundUnits.length > 0) {
+    inner += '<div class="menu-item" style="font-weight: normal";>Units</div>\n';
+    for (obj of foundUnits) {
+      let splits = (str.includes(" ") ? [obj.name] : obj.name.split(" "));
+      if (obj.index >= 0) {
+        let result = obj.index ? splits[0] : `<span style="font-weight: bold;">${splits[0].substr(0, str.length)}</span>${splits[0].substr(str.length)}`;
+        for (let index = 1; index < splits.length; index++) {
+          result += (index === obj.index ? ` <span style="font-weight: bold;">${splits[index].substr(0, str.length)}</span>${splits[index].substr(str.length)}` : ` ${splits[index]}`);
+        }
+        inner += `<a href="${obj.link}" class="sub-menu-item" style="padding: 9px 50px;">${result}</a>\n`;
+      } else {
+        let result = `${obj.name.substr(0, -obj.index - 1)}<span style="font-weight: bold;">${obj.name.substr(-obj.index - 1, str.length)}</span>${obj.name.substr(-obj.index - 1 + str.length)}`;
+        inner += `<a href="${obj.link}" class="sub-menu-item" style="padding: 9px 50px;">${result}</a>\n`;
+      }
+    }
+  }
+  if (foundStrats.length > 0) {
+    inner += '<div class="menu-item" style="font-weight: normal;">Strategies</div>\n';
+    for (obj of foundStrats) {
+      let splits = (str.includes(" ") ? [obj.name] : obj.name.split(" "));
+      if (obj.index >= 0) {
+        let result = obj.index ? splits[0] : `<span style="font-weight: bold;">${splits[0].substr(0, str.length)}</span>${splits[0].substr(str.length)}`;
+        for (let index = 1; index < splits.length; index++) {
+          result += (index === obj.index ? ` <span style="font-weight: bold;">${splits[index].substr(0, str.length)}</span>${splits[index].substr(str.length)}` : ` ${splits[index]}`);
+        }
+        inner += `<a href="${obj.link}" class="sub-menu-item" style="padding: 9px 50px;">${result}</a>\n`;
+      } else {
+        let result = `${obj.name.substr(0, -obj.index - 1)}<span style="font-weight: bold;">${obj.name.substr(-obj.index - 1, str.length)}</span>${obj.name.substr(-obj.index - 1 + str.length)}`;
+        inner += `<a href="${obj.link}" class="sub-menu-item" style="padding: 9px 50px;">${result}</a>\n`;
+      }
+    }
+  }
+  if (count == 6) {
+    inner += '<div class="menu-item" style="font-weight: normal;">and 1 more result</div>\n';
+  } else if (count > 6) {
+    inner += `<div class="menu-item" style="font-weight: normal;">and ${count - 5} more results</div>\n`;
+  }
+  if (inner === '') {
+    searchResult.innerHTML = '<div class="menu-item" style="font-weight: normal;">no results</div>\n';
+  } else {
+    searchResult.innerHTML = inner;
   }
 });
