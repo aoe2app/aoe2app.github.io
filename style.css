@@ -22,34 +22,93 @@ a {
   text-align: center;
   z-index: 2;
 }
-.content {
-  position: absolute;
-  top: 120;
-  width: 100%;
-}
 .largepic {
   width: 80;
 }
-.menu-item {
+.menu-button {
+  height: 100%;
+  font-size: 110%;
+  align-self: flex-start;
+  cursor: pointer;
+}
+.menu-button.closed {
+  color: white;
+  background-color: black;
+  opacity: 1;
+}
+.menu-button.opened {
+  color: black;
+  background-color: lightGray;
+  opacity: 0.97;
+}
+.menu.closed {
+  display: none;
+}
+.menu.opened {
+  position: fixed;
+  top: 120;
   width: 66%;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+}
+.search-button {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  cursor: pointer;
+}
+.search-button.closed {
+  color: white;
+  background-color: black;
+  opacity: 1;
+}
+.search-button.opened {
+  color: black;
+  background-color: lightGray;
+  opacity: 0.97;
+}
+.search.closed {
+  display: none;
+}
+.search.opened {
+  position: fixed;
+  top: 120;
+  width: 100%;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+}
+.menu-item {
+  width: 100%;
   font-size: 300%;
   font-weight: bold;
   color: black;
   background-color: lightGrey;
   border: 1px solid lightGrey;
   padding: 20px;
-  z-index: 2;
   opacity: 0.97;
 }
 .sub-menu-item {
-  width: 66%;
+  width: 100%;
   font-size: 280%;
   color: black;
   background-color: darkGrey;
   border: 1px solid darkGrey;
   padding: 16px 50px;
-  z-index: 2;
   opacity: 0.97;
+}
+.content {
+  position: absolute;
+  top: 120;
+  width: 100%;
+}
+.content.closed {
+  opacity: 1;
+}
+.content.opened {
+  opacity: 0.3;
 }
 .civs {
   align-items: center;
