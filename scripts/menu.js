@@ -154,6 +154,7 @@ const units = [
   {name: 'Fast Fire Ship', link: '/units/fast_fire_ship.html'},
   {name: 'Fire Galley', link: '/units/fire_galley.html'},
   {name: 'Fire Ship', link: '/units/fire_ship.html'},
+  {name: 'Flaming Camel', link: '/units/flaming_camel.html'},
   {name: 'Galleon', link: '/units/galleon.html'},
   {name: 'Galley', link: '/units/galley.html'},
   {name: 'Gbeto', link: '/units/gbeto.html'},
